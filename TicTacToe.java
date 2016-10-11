@@ -7,8 +7,8 @@ public class TicTacToe {
 		final int gridSize = 3;
 		final char X = 'X', O = 'O';
 		final int XX = 10, OO=0;
-		int countGames, X_won, O_won;				// games played and won
-		countGames = X_won = O_won = 0;
+		int countGames, x_won, x_won;				// games played and won
+		countGames = x_won = x_won = 0;
 		int row, col;
 		int countPositionsUsed = 0;					// positions used to date
 		char turn = 'X'; // whose turn is it
@@ -60,19 +60,19 @@ public class TicTacToe {
 			{
 				printGrid(grid,XX,OO);
 				if(turn == X)
-					X_won++;
+					x_won++;
 				else
-					O_won++;
+					o_won++;
 
 				// Show standings at this point
 				System.out.println("Congratulations Player " + turn + 
 						" - You win"+ "\nGames played to date is " + countGames +
-						"Player X has won " + X_won + " games(s); Player O has won " + O_won +
+						"Player X has won " + x_won + " games(s); Player O has won " + o_won +
 						" game(s),");			
 			}
 			else if (countPositionsUsed == gridSize * gridSize)
 				System.out.println("This game is a tie" + "\nGames played to date is " + countGames +
-						"\nPlayer X has won " + X_won + " games(s); Player O has won " + O_won +
+						"\nPlayer X has won " + x_won + " games(s); Player O has won " + o_won +
 						" game(s),");
 			else 
 			{
